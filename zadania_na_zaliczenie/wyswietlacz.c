@@ -20,10 +20,7 @@ int main(void){
     }
     int liczba_cyfr = j;
     i=j;
-    for(;i<=MAX_DIGITS; i++)
-    {
-    	liczba[i] = 'n';
-    }
+
 
 
 
