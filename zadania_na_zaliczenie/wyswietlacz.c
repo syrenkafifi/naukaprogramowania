@@ -9,7 +9,7 @@ int main(void){
     //printf("Podaj liczbę: ");
     //scanf("%ms", &raw_liczba); // zapisujemy liczbe
 
-    raw_liczba = "52";
+    raw_liczba = "321-0479";
     char liczba[MAX_DIGITS];
     for(i = 0, j=0; i<sizeof(raw_liczba) && j<MAX_DIGITS; i++)
     {
@@ -18,7 +18,7 @@ int main(void){
     		j++;
     	}
     }
-    int liczba_cyfr = 2;
+    int liczba_cyfr = j;
     i=j;
     for(;i<=MAX_DIGITS; i++)
     {
@@ -47,52 +47,44 @@ int main(void){
 
 
 	for(i=0; i<liczba_cyfr; i++){
-			printf("^");
+			printf(" ");
     		if(segm[liczba[i]-48][0]==1)
     		{
     			printf("_");
     		}
     		else
     		{
-    			printf("*");
+    			printf(" ");
     		}
-    		printf("^");
-    		printf("^");
+    		printf(" ");
+    		printf(" ");
 	}
 	printf("\n");
 
 	for(i=0; i<liczba_cyfr; i++){
     		if(segm[liczba[i]-48][1]==1){
-    			printf("2");
+    			printf("|");
     		}
     		else{
-    			printf("1");
+    			printf(" ");
     		}
-    		
-	}
-
-
-	for(i=0; i<liczba_cyfr; i++){
     		if(segm[liczba[i]-48][2]==1){
     			printf("_");
     		}
     		else{
-    			printf("*");
+    			printf(" ");
     		}
-    		
-	}
-	
-
-	for(i=0; i<liczba_cyfr; i++){
     		if(segm[liczba[i]-48][3]==1){
     			printf("|");
     		}
     		else{
-    			printf("*");
+    			printf(" ");
     		}
-    		printf("^");
-    		printf("^");
+    		printf(" ");
+    		
 	}
+
+
 	printf("\n");
 
 	for(i=0; i<liczba_cyfr; i++){
@@ -100,30 +92,25 @@ int main(void){
     			printf("|");
     		}
     		else{
-    			printf("*");
+    			printf(" ");
     		}
-	}
-
-
-	for(i=0; i<liczba_cyfr; i++){
     		if(segm[liczba[i]-48][5]==1){
     			printf("_");
     		}
     		else{
-    			printf("*");
+    			printf(" ");
     		}
-	}
-	
-
-	for(i=0; i<liczba_cyfr; i++){
     		if(segm[liczba[i]-48][6]==1){
     			printf("|");
     		}
     		else{
-    			printf("*");
+    			printf(" ");
     		}
-    		printf("^");
+    		printf(" ");
 	}
+
+
+
 	printf("\n");
 
 
