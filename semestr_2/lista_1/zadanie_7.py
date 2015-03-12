@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# narazie sie tym nie przejmuj :-)
+# dziala i bez :P
 if __name__ == "__main__":
     n = input("Podaj liczbe n (n > 2): ")
     k = raw_input("Podaj liczbe k (k > " + str(n) + "): ")
