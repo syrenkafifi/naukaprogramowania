@@ -35,7 +35,7 @@ tablica_wartosci = [
 ]
 
 
-def funkcja_celu():
+def funkcja_celu(plansza):
     suma = 0
     for i in range(0, 8):
         for j in range(0, 8):
@@ -106,7 +106,22 @@ def zaczynamy():
 
 
 def reakcja_komputera():
-    pass
+    mozliwe_ruchy_komputera = mozliwe_ruchy(gracz=1, plansza=plansza)
+    if len(mozliwe_ruchy_komputera)>0:
+        najlepszy_ruch = mozliwe_ruchy_komputera[0]
+        najwieksza_funkcja_celu = 0
+        for ruch in mozliwe_ruchy_komputera:
+            kopia_planszy = copy.deepcopy(plansza)
+            kopia_planszy[ruch[0]][ruch[1]] = 1
+            przetwarzanie_planszy(gracz=1, wiersz=ruch[0], kolumna=ruch[1], plansza=kopia_planszy)
+            fc = funkcja_celu(plansza=kopia_planszy)
+            if fc >najwieksza_funkcja_celu:
+                najwieksza_funkcja_celu =fc
+                najlepszy_ruch = ruch
+
+        plansza[ruch[0]][ruch[1]] = 1
+        przetwarzanie_planszy(gracz=1, wiersz=ruch[0], kolumna=ruch[1], plansza=plansza)
+
 
 
 def postaw_krzyzyk(kolumna, wiersz):
