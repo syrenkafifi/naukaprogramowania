@@ -2,8 +2,8 @@
 # to powyżej słuzy poprawnemu wyswietlaniu polskich znakow
 
 if __name__ == "__main__":
-    # sciezka_do_pliku = raw_input("Podaj sciezke do pliku: ")
-    sciezka_do_pliku = 'pytania'
+    sciezka_do_pliku = raw_input("Podaj sciezke do pliku: ")
+    # sciezka_do_pliku = 'pytania'
     plik = open(sciezka_do_pliku)
 
     lista_pytan = []
