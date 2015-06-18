@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
 # to powyżej słuzy poprawnemu wyswietlaniu polskich znakow
+#importujemy biblioteke pickle
 import pickle
 
 if __name__ == "__main__":
+    # czytamy nazwe pliku z pytaniami
     sciezka_do_pliku = raw_input("Podaj sciezke do pliku: ")
+    # zerujemy wynik
     wynik = 0
+    # ladujemy liste pytan z otwartego pliku
     lista_pytan = pickle.load( open(sciezka_do_pliku, 'rb'))
+    # reszta analogicznie jak w quzie3
     for blok in lista_pytan:
         print 'kategoria: ' + blok['kategoria']
         print 'pytanie: ' + blok['pytanie']
