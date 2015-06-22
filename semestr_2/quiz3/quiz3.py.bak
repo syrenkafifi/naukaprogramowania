@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
     # prosimy uzytkownika by podal nam sciezke do pliku w ktorym sa zapisane pytania
-    sciezka_do_pliku = input("Podaj sciezke do pliku: ")
+    sciezka_do_pliku = raw_input("Podaj sciezke do pliku: ")
 
     #otwieramy ten plik
     plik = open(sciezka_do_pliku)
@@ -86,14 +86,14 @@ if __name__ == "__main__":
     # iterujemy po liscie pytan
     for blok in lista_pytan:
         # wyswietlamy dane
-        print(('kategoria: ' + blok['kategoria']))
-        print(('pytanie: ' + blok['pytanie']))
-        print(('1) ' + blok['odpowiedz_1']))
-        print(('2) ' + blok['odpowiedz_2']))
-        print(('3) ' + blok['odpowiedz_3']))
-        print(('4) ' + blok['odpowiedz_4']))
+        print ('kategoria: ' + blok['kategoria'])
+        print ('pytanie: ' + blok['pytanie'])
+        print ('1) ' + blok['odpowiedz_1'])
+        print ('2) ' + blok['odpowiedz_2'])
+        print ('3) ' + blok['odpowiedz_3'])
+        print ('4) ' + blok['odpowiedz_4'])
         # czytamy odpowiedz uzytkownika
-        odpowiedz = int(input('Twoja odpowiedz (podaj numer): '))
+        odpowiedz = int(raw_input('Twoja odpowiedz (podaj numer): '))
         # sprawdzamy odpowiedz uzytkownika
         if odpowiedz == int(blok['prawidlowa_odpowiedz']):
             # jak dobra to dajemy pkt
@@ -102,10 +102,10 @@ if __name__ == "__main__":
         else:
             print ('ZŁA ODPOWIEDŹ')
         #wyswietalmy wyjasnienie
-        print((blok['wyjasnienie']))
+        print (blok['wyjasnienie'])
 
     # podsumowanie gry
-    print(('Odpowiedziales prawidlowo na ' + str(wynik) + ' z ' + str(len(lista_pytan)) + ' pytań'))
+    print ('Odpowiedziales prawidlowo na ' + str(wynik) + ' z ' + str(len(lista_pytan)) + ' pytań')
 
 
 
