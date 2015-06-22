@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # to powyżej słuzy poprawnemu wyswietlaniu polskich znakow
 
 
@@ -73,10 +72,10 @@ for i in range(0,3):
             # jezeli zaden gracz nie wygrał to petla powroci do poczatku i wykona ponowny rzut i reszte
 
 # wyswietlamy wyniki
-print 'WYNIKI'
+print ('WYNIKI')
 
 # a tutaj zeby bylo ciekawiej uzylem petli for each, ktora przejdzie po wsystkich elementach listy
 i = 1
 for wynik in wyniki_par:
-    print 'PARA ' + str(i) + ' - gracz_1: ' + str(wynik['gracz_1'])+'    - gracz_2: ' + str(wynik['gracz_2'])
+    print ('PARA ' + str(i) + ' - gracz_1: ' + str(wynik['gracz_1'])+'    - gracz_2: ' + str(wynik['gracz_2']))
     i+=1
