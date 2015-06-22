@@ -5,8 +5,8 @@ plansza = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
 
 def wyswietl_plansze(wygrana=0):
-    print('    1   2   3')
-    print('   ------------')
+    print '    1   2   3'
+    print '   ------------'
     i = 1
     for wiersz in plansza:
         rzad = str(i) + ' |'
@@ -17,18 +17,18 @@ def wyswietl_plansze(wygrana=0):
                 rzad += ' o |'
             else:
                 rzad += '   |'
-        print(rzad)
-        print('   ------------')
+        print rzad
+        print '   ------------'
         i += 1
-    print('\n')
+    print '\n'
     if wygrana == -1:
-        print('wygrałeś')
+        print 'wygrałeś'
     elif wygrana == 1:
-        print('wygrał komputer')
+        print 'wygrał komputer'
     elif wygrana == 7:
-        print('remis')
+        print 'remis'
     elif wygrana == 0:
-        print('graj dalej')
+        print 'graj dalej'
 
 
 def postaw_krzyzyk(kolumna, wiersz):
@@ -36,12 +36,12 @@ def postaw_krzyzyk(kolumna, wiersz):
 
 
 def reakcja_uzytkownika():
-    wiersz = eval(input("Podaj numer wiersza: ")) - 1
-    kolumna = eval(input("Podaj numer kolumny: ")) - 1
+    wiersz = input("Podaj numer wiersza: ") - 1
+    kolumna = input("Podaj numer kolumny: ") - 1
     if pole_jest_wolne(wiersz, kolumna):
         postaw_krzyzyk(kolumna, wiersz)
     else:
-        print('To pole jest zajete')
+        print 'To pole jest zajete'
         reakcja_uzytkownika()
 
 
@@ -228,7 +228,7 @@ def reakcja_komputera():
 
 
 def zaczynamy():
-    kolejnosc = input("Kto zaczyna (k)omputer czy (u)zytkonik? ")
+    kolejnosc = raw_input("Kto zaczyna (k)omputer czy (u)zytkonik? ")
     if kolejnosc == 'k':
         reakcja_komputera()
     elif kolejnosc == 'u':
