@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# to powyżej słuzy poprawnemu wyswietlaniu polskich znakow
 #importujemy pickle
 import pickle
 
